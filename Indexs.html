@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Clothing Store</title>
+ <style>
+
+body {
+    background-image: url(images/image16.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.navbar {
+    background-color: #d1114d;
+    overflow: hidden;
+}
+
+.navbar a { 
+    width: 150px;
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover { 
+    background-color: #ddd;
+    color: #000000; 
+}
+
+.active {
+    background-color: #edd5d1;
+}
+
+h1 { 
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Times New Roman';
+}
+
+h2 {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+p {
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center; 
+}
+
+.container {
+    opacity: 1.5;
+    position: relative;
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+} 
+
+.image { 
+    display:inline-block;
+    width: 300px;
+    height: 200px;
+    border-radius: 70%; 
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #008000;
+    overflow: hidden;
+    width: 100%;
+    height:0; 
+    transition:.5s ease; 
+}
+
+.container:hover.overlay {
+    height:30px;
+}
+
+button{
+    background-color: #2EA1DA;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    height: 50px;
+    width: 120px;
+    font-size: 20px;
+    margin-left: 430px;
+}
+
+input {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.signin {
+    background: transparent;
+    border: none;
+    padding: 14px 20px;
+}
+
+.signup {
+    background-color: #2EA1DA;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.signup button {
+    color: #D6517C;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    background-color: #d1114d;
+}
+
+.form {
+    display: flex;
+    margin-top: 10px;
+    background-color: #F1D39D;
+}
+</style>
+<body>
+</head>
+<ul class="navbar"style="list-style-type: none;">
+ <li><a href="Homes.html"class="active">Home</a></li>
+ <li><a href="Item.html">Items</a></li>
+ <li><a href="Reviewss.html">Reviews</a></li>
+ <li><a href="Aboutuss.html">About Us</a></li>
+ <li><a href="Contacts.html">Contact</a></li>
+
+
+<div>
+    <input class="signin" type="submit" value="Sign In" name="signin" onclick="showLoginForm()">
+    <input class="signup" type="submit" value="Sign Up" name="signup" onclick="showSignupForm()">
+    <input class="logout" type="submit" value="Log Out" name="logout" onclick="logout()" style="display: none;">
+    <input class="signout" type="submit" value="Sign Out" name="signout" onclick="signout()" style="display: none;">
+</div>
+</ul>
+
+<div class="container">
+<h1>LUISA' ONLINE CLOTHING STORE</h1>
+<h2>Order Your Best Clothes anytime</h2>
+<p>Hey,Our wonderful clothing store  is waiting for you,
+<br>We are always here to you with fresh items of clothes for all of you.</p>
+<div class="button">
+<button>Shop Now</button>
+</div>
+</div>
+<div class="form">
+<div id="loginForm" style="display:none;">
+<h2>Login</h2>
+<form>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <button type="button" onclick="login()">Login</button>
+</form>
+</div>
+<div id="signupForm" style="display: none;">
+<h2>Sign Up</h2>
+<form>
+    <label for="fullname">Full Name:</label>
+    <input type="text" id="fullname" name="fullname" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <button type="button" onclick="signup()">Sign Up</button>
+</form>
+</div>
+<script>
+function showLoginForm() {
+    document.getElementById("loginForm").style.display = "inline-block";
+    document.querySelector(".signin").style.display = "none";
+    document.querySelector(".signup").style.display = "none";
+    document.querySelector(".logout").style.display = "inline-block";
+}
+    
+function login() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    
+        
+    document.getElementById("loginForm").style.display = "none";
+    document.querySelector(".signin").style.display = "none";
+    document.querySelector(".signup").style.display = "none";
+    document.querySelector(".logout").style.display = "inline-block";
+    alert("Login successful!");
+}
+    
+function logout() {
+    document.getElementById("loginForm").style.display = "none";
+    document.querySelector(".signin").style.display = "inline-block";
+    document.querySelector(".signup").style.display = "inline-block";
+    document.querySelector(".logout").style.display = "none";
+    alert("Logout successful!");
+}
+    
+function showSignupForm() {
+    document.getElementById("signupForm").style.display = "block";
+    document.getElementById("loginForm").style.display = "none";
+    document.querySelector(".signin").style.display = "none";
+    document.querySelector(".signup").style.display = "none";
+}
+    
+function signup() {
+    var fullname = document.getElementById("fullname").value;
+    var email = document.getElementById("email").value;
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    
+        
+    if (fullname && email && username && password) {
+           
+    
+            
+    document.getElementById("signupForm").style.display = "inline-block";
+    alert("Sign up successful! Welcome, " + fullname + "!");
+    } else {
+    alert("Please fill in all the required fields.");
+}
+}
+</script>
+</div>
+</div>
+</head>
+</html>  
+   
+    

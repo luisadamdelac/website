@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Clothing Store</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+body {
+   background-image: url(images/image16.jpg);
+   background-repeat: no-repeat;
+   background-size:cover;
+}
+
+.navbar {
+   background-color: #d1114d;
+   overflow: hidden;
+}
+
+.navbar a { 
+   width: 150px;
+   float: left;
+   display: block;
+   color: #f2f2f2;
+   text-align: center;
+   padding: 14px 20px;
+   text-decoration: none;
+}
+
+.navbar a:hover { 
+   background-color: #ddd;
+   color: #000000; }
+
+.active {
+   background-color: #edd5d1;
+}
+.container .title h1 { 
+   margin-top: 1px;
+   font-size: 50px;
+   text-align: center;
+   font-family: 'Times New Roman';
+}
+
+.container .title h2 {
+   text-align: center;
+   font-size: 20px;
+   text-align: left;
+   margin-top: 40px;
+}
+
+.container .title h3{
+ margin-left: 450px;
+   font-size: 30px;
+   background-color: pink;
+   width: 165px;
+   padding: 5px;
+}
+
+p {
+   font-size: 15px;
+   font-weight: normal;
+   text-align: left; 
+}
+
+.container {
+   background-image: url(images/image16.jpg);
+   opacity: 1.0;
+   position: relative;
+   width: 90%;
+   margin: 40px auto;
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0,0,0,0.2);
+} 
+
+.overlay {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background-color: #008000;
+   overflow: hidden;
+   width: 100%;
+   height:0; 
+   transition:.5s ease; }
+
+.container:hover.overlay {
+   height:30px;
+}
+
+::-webkit-scrollbar{
+   width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+   border-radius: 20px;
+   background-color: #d1114d;
+}
+
+
+  
+.contact-form {
+    padding: 30px;
+    background-color: #ddd;
+    border: 1px solid #ddd ;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  
+.form-group {
+    margin-bottom: 20px;
+    background-color: #ddd;
+    border: 1px solid #ddd ;
+}
+  
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+}
+  
+.form-group input[type="text"], .form-group input[type="email"], .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #efc6d3;
+    border-radius: 5px;
+}
+  
+.form-group textarea {
+    height: 100px;
+    background-color:#ffffff;
+    border: 1px solid #efc6d3; ;
+}
+  
+.btn-primary {
+    background-color:  #d1114d;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+
+.contact-info {
+    padding: 30px;
+    background-color: #ddd;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  
+.contact-info h3 {
+    margin-top: 0;
+}
+  
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  
+.contact-info li {
+    margin-bottom: 10px;
+}
+  
+.contact-info i {
+    margin-right: 10px;
+    color: #337ab7;
+}
+  
+.contact-info li:hover i {
+    color: #23527c;
+}
+
+.list-unstyled{
+   display: flex;
+   text-decoration: underline;
+   color: #0000ff;
+}
+</style>
+</head>
+<body>
+<ul class="navbar"style="list-style-type: none;">
+ <li><a href="Indexs.html">Home</a></li>
+ <li><a href="Item.html">Items</a></li>
+ <li><a href="Reviewss.html">Reviews</a></li>
+ <li><a href="Aboutuss.html">About Us</a></li>
+ <li><a href="Contacts.html"class="active">Contact</a></li>
+</ul>
+
+<div class="container">
+   <div class="title">
+   <h1>LUISA' ONLINE CLOTHING STORE</h1>
+
+   <h3>Contact Us</h3>
+</div>
+   <div class="row">
+   <form class="contact-form" action="successs.html" method="post">
+   <div class="form-group">
+   <label for="name">Name:</label>
+   <input type="text" id="name" name="name" required>
+   </div>
+   <div class="form-group">
+   <label for="email">Email:</label>
+   <input type="email" id="email" name="email" required>
+   </div>
+   <div class="form-group">
+   <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+   </div>
+   <button type="submit" class="btn btn-primary">Send Message</button>
+   </form>
+   </div>
+   <div class="contact-info">
+   <h2>Get in Touch</h2>
+   <p> Our team is here to help you with any questions or concerns you may have. Feel free to reach out to us using the contact form or by using the information below.
+   </p>
+   <br>
+   
+   <ul class="list-unstyled">
+   <li><i class="fa-solid fa-location-dot"><br></i> Bulalo Balite,Calapan City,Oriental Mindoro</li>
+   <li><i class="fa-solid fa-phone"><br></i> 09276305886</li>
+   <li><i class="fa-solid fa-envelope"><br></i> luisadamdelacruz8@gmail.com & luisastore@gmail.com</li>
+   </ul>
+   </div>
+   </div>
+   </div>
+   </div>
+   </section>
+   <script>
+   function sendMessage(event) {
+       event.preventDefault();
+   
+         
+       var name = document.getElementById('name').value;
+       var email = document.getElementById('email').value;
+       var message = document.getElementById('message').value;
+       alert('Message sent successfully!');
+       window.location.href = "success.html";
+       document.getElementById('contact-form').reset();
+   }
+   </script>
+   </body>
+   </html>
